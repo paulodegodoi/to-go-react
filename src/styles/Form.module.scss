@@ -1,0 +1,111 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 150px;
+    border-radius: 50%;
+  }
+
+  h2 {
+    margin-top: -35px;
+    text-align: center;
+  }
+
+  button {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    width: 200px;
+    height: 50px;
+    background-color: #69ff69;
+
+    &:not([disabled]):hover {
+      cursor: pointer;
+      background-color: #4fc04f;
+      color: aliceblue;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+
+  .formContent {
+    display: flex;
+    gap: 200px;
+
+    .formFields {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      label {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+
+        .userDataInput {
+          height: 38px;
+        }
+
+        .labelName {
+          margin-bottom: .5rem;
+        }
+
+        input {
+          border: 2px solid transparent;
+          border-radius: 5px;
+          width: 300px;
+          font-size: 1rem;
+          transition: .3s;
+          outline: none;
+
+          &:focus {
+            border: 2px solid purple;
+            background-color: rosybrown;
+            color: aliceblue;
+          }
+        }
+
+        .select {
+          color: black;
+        }
+
+        .errorMessage {
+          margin-top: 5px;
+          height: 1rem;
+          color: rgb(255, 93, 93);
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .formContainer {
+    height: 100%;
+
+    p {
+      margin-top: 1rem;
+    }
+
+    button {
+      margin-bottom: 1rem;
+    }
+
+    .formContent {
+      flex-direction: column;
+      gap: 50px;
+    }
+  }
+}

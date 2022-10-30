@@ -1,0 +1,30 @@
+.container {
+  position: fixed;
+  z-index: 9;
+  background-color: #1d1d1df7;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: aliceblue;
+  font-size: 2rem;
+
+  h3 {
+    text-align: center;
+  }
+
+  button {
+    width: 100px;
+    height: 50px;
+    background-color: #45caff;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #3697be;
+    }
+  }
+}
